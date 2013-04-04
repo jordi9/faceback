@@ -1,0 +1,27 @@
+.facebacks h2 {
+  margin-top: 20px;
+}
+
+.facebacks form {
+  margin-top: 20px;
+}
+
+.faceback .btn {
+  font-size: 1000%;
+  width: 100%;
+  height: 100%;
+  font-family: courier;
+  background-image: none;
+}
+
+.happy, .happy:hover {
+  background-color: green;
+}
+
+.pse, .pse:hover {
+  background-color: yellow;
+}
+
+.sad, .sad:hover {
+  background-color: red;
+}

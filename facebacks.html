@@ -1,0 +1,39 @@
+<div class="row-fluid" ng-init="bootstrap()">
+  <div class="span10 offset1 facebacks">
+
+    <div class="page-header">
+      <h1>Faceback</h1>
+    </div>
+    <button class="btn btn-large btn-primary" type="button"
+        ng-click="addTalk = !addTalk" ng-init="addTalk = false">
+      Add new Talk
+    </button>
+    <form class="form-inline" name="form" ng-show="addTalk">
+      <fieldset>
+        <input type="text" placeholder="Talk name" required ng-model="faceback.name">
+        <button type="submit" class="btn" ng-click="save()">Submit</button>
+      </fieldset>
+    </form>
+
+    <h2>Talks</h2>
+
+    <table class="table table-bordered table-striped">
+      <thead>
+        <th>Talk name</th>
+        <th>:)</th>
+        <th>:|</th>
+        <th>:(</th>
+      </thead>
+      <tr ng-repeat="faceback in facebacks">
+        <td>
+          <a href="#/faceback/{{faceback.$id()}}">
+            {{faceback.name}}
+          </a>
+        </td>
+        <td>{{faceback.happyCount}}</td>
+        <td>{{faceback.pseCount}}</td>
+        <td>{{faceback.sadCount}}</td>
+      </tr>
+    </table>
+  </div>
+</div>
