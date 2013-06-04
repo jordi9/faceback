@@ -25,3 +25,17 @@
 .sad, .sad:hover {
   background-color: red;
 }
+
+#thanks {
+  position: fixed;
+  top:0;
+  width:100%;
+  background-color: #0480be;
+  text-align: center;
+  padding: 3em;
+}
+
+#thanks span {
+  font-size: 70px;
+  color: #ffffff;
+}

@@ -1,4 +1,9 @@
-<div id="faces" ng-controller="FeedbackCtrl" ng-init="bootstrap()">
+<div id="faces" ng-controller="FeedbackCtrl" ng-init="bootstrap()" ng-model="th">
+  <div id="thanks" style="visibility: hidden">
+    <span>
+      Thank you!
+    </span>
+  </div>
   <div class="row-fluid faceback">
     <div class="span4">
       <button class="btn happy" ng-click="feedback('happy')" >

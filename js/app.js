@@ -48,10 +48,18 @@ app.controller('FeedbackCtrl', function($scope, $routeParams, Faceback) {
   $scope.feedback = function (status) {
     Faceback.getById($routeParams.facebackId).then(function(f) {
       f[status + "Count"]++;
-      f.$saveOrUpdate(function() {
-        console.log("saved!")
-      })
+
+      var saveOrUpdateThanks = function () {
+        $("#thanks").css("visibility", "visible");
+        setTimeout(function() {
+          $("#thanks").css("visibility", "hidden");
+        },1500)
+      };
+
+      // Need to use the same callback for save or update
+      f.$saveOrUpdate(saveOrUpdateThanks, saveOrUpdateThanks);
 
     });
   }
+
 });
